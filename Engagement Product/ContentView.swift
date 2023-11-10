@@ -6,18 +6,28 @@
 //
 
 import SwiftUI
+import CleverTapSDK
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Push product viewed event") {
+                recordProductViewed()
+            }
         }
-        .padding()
     }
 }
+
+func recordProductViewed() {
+    let property :  [String : Any] = [
+        "Product ID" : 1,
+        "Product Image" : "https://d35fo82fjcw0y8.cloudfront.net/2018/07/26020307/customer-success-clevertap.jpg",
+        "Product Name" : "CleverTap"
+    ]
+    
+    CleverTap.sharedInstance()?.recordEvent("Product viewed", withProps: property)
+}
+
 
 #Preview {
     ContentView()
