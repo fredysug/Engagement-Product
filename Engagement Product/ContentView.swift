@@ -13,6 +13,7 @@ struct ContentView: View {
         VStack {
             Button("Push product viewed event") {
                 recordProductViewed()
+                pushEmailIdToProfile()
             }
         }
     }
@@ -26,6 +27,13 @@ func recordProductViewed() {
     ]
     
     CleverTap.sharedInstance()?.recordEvent("Product viewed", withProps: property)
+}
+
+func pushEmailIdToProfile() {
+    let profile = [
+        "Email": "clevertap+sugiarto2fredy@gmail.com"
+    ]
+    CleverTap.sharedInstance()?.profilePush(profile)
 }
 
 
