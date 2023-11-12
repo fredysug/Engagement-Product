@@ -36,6 +36,7 @@ https://developer.clevertap.com/docs/concepts-user-profiles
 ![Screenshot 2023-11-13 at 02 34 10](https://github.com/fredysug/Engagement-Product/assets/25896500/019c0852-ef11-40a8-b95b-aebbbd2e07ec)
 - Import the CSV file, [template](https://s3.eu-west-1.amazonaws.com/static.wizrocket.com/csv/sample-upload-csv.csv) 
 ![Screenshot 2023-11-13 at 02 34 30](https://github.com/fredysug/Engagement-Product/assets/25896500/32cddb6b-a524-4d9f-bb93-7395d1f60ed5)
+
 Notes: To add custom user property, add a new row with the property name in the header
 
 Reference: https://docs.clevertap.com/docs/csv-upload
